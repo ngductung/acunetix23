@@ -104,7 +104,7 @@ default_command()
 
   regex="^([A-Za-z]+[A-Za-z0-9]*((\.|\-|\_)?[A-Za-z]+[A-Za-z0-9]*){1,})@(([A-Za-z]+[A-Za-z0-9]*)+((\.|\-|\_)?([A-Za-z]+[A-Za-z0-9]*)+){1,})+\.([A-Za-z]{2,})+"
   while true; do
-      new_master_user=ngductung@gmail.com
+      new_master_user=ngductung@mail.com
 
       if [ -z $new_master_user ]; then
           break
@@ -125,9 +125,9 @@ default_command()
   #echo "Using master user $master_user"
 
   while true; do
-      master_password=Vhae@04
+      master_password=1
 
-      master_password2=Vhae@04
+      master_password2=1
       echo
       [ "$master_password" = "$master_password2" ] && break
       echo "Passwords don't match. Please try again."
