@@ -55,11 +55,10 @@ getDocker() {
 clean() {
   clear
   echo -e "\n\033[1;31m \033[0m"
-  echo -e "  \033[1;36m src: fahai \033[0m"
-  echo -e " \033[1;32m「 account day heh >< 」\033[0m"
+  echo -e "  \033[1;36m src: VHAE04 \033[0m"
   echo -e " \033[1;36m username: ngductung@mail.com \033[0m"
   echo -e " \033[1;36m password: 1 \033[0m\n"
-  echo -e "\n \033[1;36m Host: https://127.0.0.1:3443 \033[0m\n"
+  echo -e "\n \033[1;36m Host: https://127.0.0.1:1337 \033[0m\n"
   msg_info "Clear historical AWVS images"
   if [ -z "$(docker images -aqf reference="${DockerImage}")" ]; then
     if ! docker rmi -f "$(docker images -aqf reference="${DockerImage}" >/dev/null 2>&1)"; then
@@ -130,16 +129,16 @@ if [ -n "$(docker ps -aq --filter name=awvs 2>/dev/null)" ]; then
   msg_ok "The Container awvs Was Deleted Success!"
 fi
 
-port="3443"
+port="1337"
 # 检测 端口是否占用
-if [ -n "$(docker ps -aq --filter publish=3443 2>/dev/null)" ]; then
+if [ -n "$(docker ps -aq --filter publish=1337 2>/dev/null)" ]; then
   port="3445"
-  msg_info "AWVS Port 3443 Is Occupied, Will Use Port 3445"
+  msg_info "AWVS Port 1337 Is Occupied, Will Use Port 3445"
   msg_over
 fi
 
 # 创建容器
-if ! docker run -itd --name awvs --cap-add LINUX_IMMUTABLE -p "${port}:3443" --restart=always "${DockerImage}" >/dev/null 2>&1; then
+if ! docker run -itd --name awvs --cap-add LINUX_IMMUTABLE -p "${port}:3443" "${DockerImage}" >/dev/null 2>&1; then
   msg_err "Create AWVS container failed"
 fi
 msg_ok "Create AWVS container Success!"
