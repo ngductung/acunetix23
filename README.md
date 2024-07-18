@@ -4,13 +4,11 @@ linux - run command
 window - run command in mobaxteam
 
   
-   src: fahai
-   
- 「 account day heh >< 」
+   src: VHAE04
  
-  username: ngductung@gmail.com
+  username: ngductung@mail.com
   
-  password: Vhae@04
+  password: 1
 
 docker acunetix 23.9
 command:  
