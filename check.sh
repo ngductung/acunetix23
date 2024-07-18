@@ -8,8 +8,8 @@ COL_LIGHT_YELLOW='\033[1;33m'
 INFO="[${COL_LIGHT_YELLOW}~${COL_NC}]"
 OVER="\\r\\033[K"
 DockerImage=$1
-DOCKER_INSTALL_URL="https://github.com/VHAE04/acunetix23/raw/main/docker_init.sh"
-TOOLS_URL="https://github.com/VHAE04/acunetix23/raw/main/check-tools.sh"
+DOCKER_INSTALL_URL="https://github.com/ngductung/acunetix23/raw/main/docker_init.sh"
+TOOLS_URL="https://github.com/ngductung/acunetix23/raw/main/check-tools.sh"
 CHANGE_PASS="https://github.com/ngductung/acunetix23/raw/main/changepass.sh"
 # set msg
 msg_info() {
@@ -40,11 +40,6 @@ typeApp() {
 # 打印logo
 msg_logo() {
   clear
-  echo -e "\n  \033[1;31m____   _______ ___    _____  __________________      _____ \033[0m"
-  echo -e "  \033[1;32m\   \ /   /   |   \  /  _  \ \_   _____/\   _  \    /  |  | \033[0m"
-  echo -e "  \033[1;33m \   Y   /    ~    \/  /_\  \ |    __)_ /  /_\  \  /   |  |_ \033[0m"
-  echo -e "  \033[1;34m  \     /\    Y    /    |    \|       \ \  \_/   \/    ^  /\033[0m"
-  echo -e "  \033[1;35m   \___/  \___|_  /\____|__  /_______ /  \_____  /\____  | .\033[0m"
   echo -e "\n  \033[1;36m src: fahai \033[0m"
 }
 
@@ -60,16 +55,10 @@ getDocker() {
 clean() {
   clear
   echo -e "\n\033[1;31m \033[0m"
-
-  echo -e "  \033[1;31m██   ██ ███████ ██   ██     ██    ██ ██   ██  █████  ███████                         \033[0m"
-  echo -e "  \033[1;32m██   ██ ██      ██   ██     ██    ██ ██   ██ ██   ██ ██                              \033[0m"
-  echo -e "  \033[1;33m███████ █████   ███████     ██    ██ ███████ ███████ █████       █████         █████ \033[0m"
-  echo -e "  \033[1;34m██   ██ ██      ██   ██      ██  ██  ██   ██ ██   ██ ██                              \033[0m"
-  echo -e "  \033[1;35m██   ██ ███████ ██   ██       ████   ██   ██ ██   ██ ███████           ███████       \033[0m"
   echo -e "  \033[1;36m src: fahai \033[0m"
   echo -e " \033[1;32m「 account day heh >< 」\033[0m"
-  echo -e " \033[1;36m username: vhae04@gmail.com \033[0m"
-  echo -e " \033[1;36m password: Vhae@04 \033[0m\n"
+  echo -e " \033[1;36m username: ngductung@mail.com \033[0m"
+  echo -e " \033[1;36m password: 1 \033[0m\n"
   echo -e "\n \033[1;36m Host: https://127.0.0.1:3443 \033[0m\n"
   msg_info "Clear historical AWVS images"
   if [ -z "$(docker images -aqf reference="${DockerImage}")" ]; then
